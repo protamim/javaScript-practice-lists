@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Dashboard | Programming Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main class="container px-4 space-y-20 flex flex-col min-h-screen items-center justify-center">
+        <h1 class="text-3xl text-lime-600">Dashboard</h1>
+
+        <section class="w-full gap-4 grid md:grid-cols-3 md:gap-4">
+            <div class="bg-green-400 p-4">
+                <h3>Deposit</h3>
+                <h4 class="text-xl text-neutral-100">
+                    $<span id="deposit-status">00</span>
+                </h4>
+            </div>
+            <div class="bg-red-400 p-4">
+                <h3>Withdraw</h3>
+                <h4 class="text-xl text-neutral-100">
+                    $<span id="withdraw-status">00</span>
+                </h4>
+            </div>
+            <div class="bg-fuchsia-400 p-4">
+                <h3>Balance</h3>
+                <h4 class="text-xl text-neutral-100">
+                    $<span id="balance-status">500</span>
+                </h4>
+            </div>
+            <!-- Deposit -->
+            <div class="bg-slate-500 p-4 space-y-4 col-span-[1.5]">
+                <input id="deposit-field" type="text" class="p-2 rounded-lg"
+                placeholder="$ Amount you want to deposit">
+                <button id="deposit-btn" class="block bg-red-200 rounded-md p-2">Deposit</button>
+            </div>
+            <!-- End of Deposit -->
+            <!-- Withdraw -->
+            <div class="bg-yellow-600 p-4 space-y-4">
+                <input id="withdraw-field" type="text" class="p-2 rounded-lg"
+                placeholder="$ Amount you want to withdraw">
+                <button id="withdraw-btn" class="block bg-red-200 rounded-md p-2">Withdraw</button>
+            </div>
+            <!-- End of Withdraw -->
+        </section>
+    </main>
+
+
+
+<script src="js/bank.js"></script>
+</body>
+</html>

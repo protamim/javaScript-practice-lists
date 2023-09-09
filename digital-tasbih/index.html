@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Taasbih</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex flex-col justify-center items-center min-h-screen gap-9">
+        <h1 class="text-5xl">Digital Taasbih</h1>
+        <div class="text-center grid grid-cols-3 gap-8">
+            <!-- Subhan Allah Container -->
+            <div class="text-center space-y-6 shadow-2xl p-7">
+                <h3 class="text-2xl">Subhan Allah</h3>
+                <span id="status" class="block text-lg">0</span>
+                <!-- Increment btn -->
+                <a id="increment-btn" class="inline-block rounded border border-current px-8 py-3 text-sm font-medium 
+                text-indigo-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring 
+                active:text-indigo-500 mr-4" href="#"> (+) </a>
+                <!-- Decrement Btn -->
+                <a id="decrement-btn" class="inline-block rounded bg-indigo-600 px-8 py-3 text-sm font-medium text-white 
+                transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring 
+                active:bg-indigo-500" href="#"> (-) </a>
+            </div>
+            <!-- End of Subhan Allah Container -->
+            <!-- Subhan Allah Container -->
+            <div class="text-center space-y-6 shadow-2xl p-7">
+                <h3 class="text-2xl">Subhan Allah</h3>
+                <span id="status" class="block text-lg">0</span>
+                <!-- Increment btn -->
+                <a id="increment-btn" class="inline-block rounded border border-current px-8 py-3 text-sm font-medium 
+                text-indigo-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring 
+                active:text-indigo-500 mr-4" href="#"> (+) </a>
+                <!-- Decrement Btn -->
+                <a id="decrement-btn" class="inline-block rounded bg-indigo-600 px-8 py-3 text-sm font-medium text-white 
+                transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring 
+                active:bg-indigo-500" href="#"> (-) </a>
+            </div>
+            <!-- End of Subhan Allah Container -->
+            <!-- Subhan Allah Container -->
+            <div class="text-center space-y-6 shadow-2xl p-7">
+                <h3 class="text-2xl">Subhan Allah</h3>
+                <span id="status" class="block text-lg">0</span>
+                <!-- Increment btn -->
+                <a id="increment-btn" class="inline-block rounded border border-current px-8 py-3 text-sm font-medium 
+                text-indigo-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring 
+                active:text-indigo-500 mr-4" href="#"> (+) </a>
+                <!-- Decrement Btn -->
+                <a id="decrement-btn" class="inline-block rounded bg-indigo-600 px-8 py-3 text-sm font-medium text-white 
+                transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring 
+                active:bg-indigo-500" href="#"> (-) </a>
+            </div>
+            <!-- End of Subhan Allah Container -->
+        </div>
+        <!-- reset btn -->
+        <a id="reset-btn" class="inline-block rounded bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 
+            p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75" href="#">
+            <span
+                class="block rounded-sm bg-white px-8 py-3 text-sm font-medium hover:bg-transparent">
+                Reset Taasbih
+            </span>
+        </a>
+    </div>
+    
+
+
+
+
+
+
+
+    <script>
+        const status = document.getElementById('status');
+        const incrementBtn = document.getElementById('increment-btn');
+        const decrementBtn = document.getElementById('decrement-btn');
+        const resetBtn = document.getElementById('reset-btn');
+
+        let initialValue = 0;
+        // Increment Button
+        incrementBtn.addEventListener('click', function(){
+            // prevents users to take taasbih greter than 33 times
+            if(initialValue == 33){
+                alert('You\'re completed 1 taasbih! Take another one.')
+                return;
+            }
+            // 33 times for subhan-allah
+            initialValue = initialValue + 1;
+            status.innerText = initialValue;
+        });
+        // Decrement button
+        decrementBtn.addEventListener('click', function(){
+            if(initialValue <= 0){
+                alert('You know! Zero don\'t have a value.');
+                return;
+            }
+            initialValue = initialValue - 1;
+            status.innerText = initialValue;
+        });
+        //reset button
+        resetBtn.addEventListener('click', function(){
+            initialValue = 0;
+            status.innerText = initialValue;
+        });
+    </script>
+</body>
+</html>

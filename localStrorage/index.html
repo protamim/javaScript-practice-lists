@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Local Strorage</title>
+    <!-- Tailwindcss CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<h2 class="text-center my-4 text-xl">Browser Local Strorage</h2>
+<!-- Add list item to a cart -->
+<section class="my-7">
+    <div class="flex flex-col md:flex-row items-center gap-5 max-w-xl mx-auto">
+        <div class="space-y-5 md:space-y-0 text-center">
+            <input id="productInput" class="border-blue-100 border py-2 px-1" type="text" placeholder="Product Name">
+            <input id="quantityInput" class="border-blue-100 border py-2 px-1" type="number" id="" placeholder="Quantity">
+        </div>
+        <div>
+            <button id="addBtn" class="bg-rose-600 text-white px-4 py-2">Add to cart</button>
+        </div>
+    </div>
+</section>
+
+<!-- cart section -->
+<section class="my-6">
+    <div class="flex items-center max-w-xl mx-auto">
+        <ul id="cart-container" class="ml-6 md:ml-0">
+            <!-- <li class="text-lg">1. Mobile 30</li> -->
+        </ul>
+    </div>
+</section>
+<!-- End of cart section -->
+
+
+<script src="js/app.js"></script>
+</body>
+</html>
